@@ -98,34 +98,35 @@ In order for Symfony's security component to use the FOSUserBundle, you must tel
 
 Below is a minimal example of the configuration necessary to use the FOSUserBundle in your application:
 
-	# app/config/packages/security.yaml
-	security:
-		encoders:
-			FOS\UserBundle\Model\UserInterface: bcrypt
+```yaml
+# app/config/packages/security.yaml
+security:
+    encoders:
+        FOS\UserBundle\Model\UserInterface: bcrypt
 
-		role_hierarchy:
-			ROLE_ADMIN:       ROLE_USER
-			ROLE_SUPER_ADMIN: ROLE_ADMIN
-				
-		providers:us
-			fos_userbundle:
-				id: fos_user.user_provider.username
+    role_hierarchy:
+        ROLE_ADMIN:       ROLE_USER
+        ROLE_SUPER_ADMIN: ROLE_ADMIN
 
-		firewalls:
-			main:
-				pattern: ^/
-				form_login:
-					provider: fos_userbundle
-					csrf_token_generator: security.csrf.token_manager
-				logout:       true
-				anonymous:    true
+    providers:us
+        fos_userbundle:
+            id: fos_user.user_provider.username
 
-		access_control:
-			- { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
-			- { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
-			- { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
-			- { path: ^/admin/, role: ROLE_ADMIN }
+    firewalls:
+        main:
+            pattern: ^/
+            form_login:
+                provider: fos_userbundle
+                csrf_token_generator: security.csrf.token_manager
+            logout:       true
+            anonymous:    true
 
+    access_control:
+        - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/admin/, role: ROLE_ADMIN }
+```
 
 
 
@@ -133,25 +134,27 @@ Below is a minimal example of the configuration necessary to use the FOSUserBund
 Now that you have activated and configured the bundle, all that is left to do is import the FOSUserBundle routing files.
 By importing the routing files you will have ready made pages for things such as logging in, creating users, etc.
 
-	# app/config/routes.yaml
-	fos_user_security:
-		resource: "@FOSUserBundle/Resources/config/routing/security.xml"
+```yaml
+# app/config/routes.yaml
+fos_user_security:
+    resource: "@FOSUserBundle/Resources/config/routing/security.xml"
 
-	fos_user_profile:
-		resource: "@FOSUserBundle/Resources/config/routing/profile.xml"
-		prefix: /profile
+fos_user_profile:
+    resource: "@FOSUserBundle/Resources/config/routing/profile.xml"
+    prefix: /profile
 
-	fos_user_register:
-		resource: "@FOSUserBundle/Resources/config/routing/registration.xml"
-		prefix: /register
+fos_user_register:
+    resource: "@FOSUserBundle/Resources/config/routing/registration.xml"
+    prefix: /register
 
-	fos_user_resetting:
-		resource: "@FOSUserBundle/Resources/config/routing/resetting.xml"
-		prefix: /resetting
+fos_user_resetting:
+    resource: "@FOSUserBundle/Resources/config/routing/resetting.xml"
+    prefix: /resetting
 
-	fos_user_change_password:
-		resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
-		prefix: /profile
+fos_user_change_password:
+    resource: "@FOSUserBundle/Resources/config/routing/change_password.xml"
+    prefix: /profile
+```
 
 ## Credits & Sources
 
