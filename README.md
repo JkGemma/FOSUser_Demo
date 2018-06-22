@@ -69,6 +69,7 @@ Now, the install of FOSUserBundle will work, you can go to step 5 to go further.
 ## Step 5 - User Entity 
 If you're persisting your users via the Doctrine ORM, then your `User` class should live in the `Entity` namespace of your bundle and look like this to start:
 
+```php
 	namespace App\Entity;
 
 	use FOS\UserBundle\Model\User as BaseUser;
@@ -77,9 +78,9 @@ If you're persisting your users via the Doctrine ORM, then your `User` class sho
 	class User extends BaseUser
 	{
 			
-		public function \__construct()
+		public function __construct()
 		{
-			parent::\__construct();
+			parent::__construct();
 		}
 	    
 	    /**
@@ -90,6 +91,7 @@ If you're persisting your users via the Doctrine ORM, then your `User` class sho
 		
 		protected $id	
 	}
+```
 	
 ## Step 6 - Security 
 In order for Symfony's security component to use the FOSUserBundle, you must tell it to do so in the  `security.yaml` file. The  `security.yaml` file is where the basic security configuration for your application is contained.
