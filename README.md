@@ -70,27 +70,27 @@ Now, the install of FOSUserBundle will work, you can go to step 5 to go further.
 If you're persisting your users via the Doctrine ORM, then your `User` class should live in the `Entity` namespace of your bundle and look like this to start:
 
 ```php
-	namespace App\Entity;
+namespace App\Entity;
 
-	use FOS\UserBundle\Model\User as BaseUser;
-	use Doctrine\ORM\Mapping as ORM;
+use FOS\UserBundle\Model\User as BaseUser;
+use Doctrine\ORM\Mapping as ORM;
 		
-	class User extends BaseUser
-	{
+class User extends BaseUser
+{
 			
-		public function __construct()
-		{
-			parent::__construct();
-		}
-	    
-	    /**
-	     * @ORM\Id()
-	     * @ORM\GeneratedValue()
-	     * @ORM\Column(type="integer")
-	     */
-		
-		protected $id	
+	public function __construct()
+	{
+		parent::__construct();
 	}
+	    
+    /**
+     * @ORM\Id()
+     * @ORM\GeneratedValue()
+     * @ORM\Column(type="integer")
+     */
+		
+	protected $id	
+}
 ```
 	
 ## Step 6 - Security 
@@ -156,4 +156,5 @@ By importing the routing files you will have ready made pages for things such as
 ## Credits & Sources
 
 Me.
+
 Symfony Doc : https://symfony.com/doc/current/bundles/FOSUserBundle/index.html
