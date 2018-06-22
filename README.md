@@ -2,7 +2,7 @@
 
 ## PRE-REQUISITES
 
-	// PHP 7.2
+	PHP 7.2 & MySQL
 
 ## Step 0 - Tips
 Useful Commands
@@ -49,6 +49,9 @@ fos_user:
         sender_name: Demo App
 ```
 
+Try again to launch the installation 
+
+	$ composer require friendsofsymfony/user-bundle "~2.1"
 
 ## Step 4 - Templating Error
 After Step 3, there is another error about templating
@@ -65,6 +68,8 @@ framework:
 ```
 
 Now, the install of FOSUserBundle will work, you can go to step 5 to go further.
+	
+	$ composer require friendsofsymfony/user-bundle "~2.1"
 
 
 ## Step 5 - User Entity 
