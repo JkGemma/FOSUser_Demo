@@ -5,22 +5,17 @@
 	// PHP 7.2
 
 ## Step 0 - Tips
-Some useful commands
+Useful Commands
 	
 	$ php bin/console make:entity
 	$ php bin/console make:migration
-	$ php bin/console doctrine:m:m
+	$ php bin/console doctrine:m:m	
+
 
 ## Step 1 - Basics
 Symfony 4 Installation
 		
-	$ composer create-project symfony/website-skeleton project_name
-		
-Must have : 
-	
-	$ composer require orm-pack
-	$ composer require symfony/maker-bundle --dev
-	
+	$ composer create-project symfony/website-skeleton project_name	
 		
 ## Step 2 - Translating
 If you wish to use default texts provided in this bundle, you have to make sure you have translator enabled in your config.
@@ -76,6 +71,7 @@ Now, the install of FOSUserBundle will work, you can go to step 5 to go further.
 If you're persisting your users via the Doctrine ORM, then your `User` class should live in the `Entity` namespace of your bundle and look like this to start:
 
 ```php
+// app/src/Entity/User.php
 namespace App\Entity;
 
 use FOS\UserBundle\Model\User as BaseUser;
@@ -163,6 +159,7 @@ fos_user_change_password:
 
 ## Credits & Sources
 
-Me.
+Me. 
+https://www.linkedin.com/in/flayacquentin/
 
-Symfony Doc : https://symfony.com/doc/current/bundles/FOSUserBundle/index.html
+Symfony Doc. https://symfony.com/doc/current/bundles/FOSUserBundle/index.html
