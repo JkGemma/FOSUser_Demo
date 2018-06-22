@@ -21,15 +21,17 @@ Must have :
 	$ composer require orm-pack
 	$ composer require symfony/maker-bundle --dev
 	
-	
-	
+		
 ## Step 2 - Translating
 If you wish to use default texts provided in this bundle, you have to make sure you have translator enabled in your config.
 
-	# app/config/services.yaml
-	framework:
-		translator: ~
-		
+```yaml
+# app/config/services.yaml
+framework:
+    translator: ~
+```	
+
+
 ## Step 3 - FOSUserBundle Installation
 In this step, you may want to add FOSuserBundle in your project folder.
 		
@@ -70,6 +72,7 @@ framework:
 
 Now, the install of FOSUserBundle will work, you can go to step 5 to go further.
 
+
 ## Step 5 - User Entity 
 If you're persisting your users via the Doctrine ORM, then your `User` class should live in the `Entity` namespace of your bundle and look like this to start:
 
@@ -96,6 +99,7 @@ class User extends BaseUser
 	protected $id	
 }
 ```
+
 	
 ## Step 6 - Security 
 In order for Symfony's security component to use the FOSUserBundle, you must tell it to do so in the  `security.yaml` file. The  `security.yaml` file is where the basic security configuration for your application is contained.
@@ -131,7 +135,6 @@ security:
         - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/admin/, role: ROLE_ADMIN }
 ```
-
 
 
 ## Step 7 - Routing 
