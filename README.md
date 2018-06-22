@@ -3,6 +3,7 @@
 ## PRE-REQUISITES
 
 	PHP 7.2 & MySQL
+	Not for production uses.
 
 ## Step 0 - Tips
 Useful Commands
@@ -167,7 +168,7 @@ fos_user_change_password:
 
 ## Credits & Sources
 
-Me. 
+Me. (Flayac 'JkGemma' Quentin, Student @Samsung Campus)
 https://www.linkedin.com/in/flayacquentin/
 
 Symfony Doc. https://symfony.com/doc/current/bundles/FOSUserBundle/index.html
