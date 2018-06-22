@@ -83,17 +83,16 @@ use Doctrine\ORM\Mapping as ORM;
 		
 class User extends BaseUser
 {
-			
 	public function __construct()
 	{
 		parent::__construct();
 	}
-	    
-    /**
-     * @ORM\Id()
-     * @ORM\GeneratedValue()
-     * @ORM\Column(type="integer")
-     */
+
+	/**
+	* @ORM\Id()
+	* @ORM\GeneratedValue()
+	* @ORM\Column(type="integer")
+	*/
 		
 	protected $id	
 }
