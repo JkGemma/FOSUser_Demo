@@ -58,8 +58,7 @@ fos_user:
 ## Step 4 - Templating Error
 After Step 3, there is another error about templating
 		
-	The service "fos_user.resetting.controller" has a dependency on a 
-	non-exist"ent service "templating".  
+	The service "fos_user.resetting.controller" has a dependency on a non-exist"ent service "templating".  
 	
 To fix it, you'll need to add
 	
