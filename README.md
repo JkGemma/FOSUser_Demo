@@ -4,6 +4,9 @@
 
 	PHP 7.2 & MySQL
 	Not for production uses.
+	
+If you clone this repository, make sure to do the command line below 
+	$ composer update
 
 ## Step 0 - Tips
 Useful Commands
