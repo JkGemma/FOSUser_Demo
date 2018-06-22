@@ -77,9 +77,9 @@ If you're persisting your users via the Doctrine ORM, then your `User` class sho
 	class User extends BaseUser
 	{
 			
-		public function __construct()
+		public function \__construct()
 		{
-			parent::__construct();
+			parent::\__construct();
 		}
 	    
 	    /**
