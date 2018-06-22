@@ -40,16 +40,17 @@ You will get an error at this point, which is
 	!! "The child node "db_driver" at path "fos_user" must be configured." !!
 		
 To fix it, you'll need to add 
-	
-	# app/config/services.yaml	
-	fos_user:
-		db_driver: orm # other valid values are 'mongodb' and 'couchdb'
-		firewall_name: main
-		user_class: App\Entity\User 
-		from_email:
-			address: noreply@example.com
-			sender_name: Demo App
 
+```yaml
+# app/config/services.yaml	
+fos_user:
+    db_driver: orm # other valid values are 'mongodb' and 'couchdb'
+    firewall_name: main
+    user_class: App\Entity\User 
+    from_email:
+        address: noreply@example.com
+        sender_name: Demo App
+```
 
 
 ## Step 4 - Templating Error
@@ -60,9 +61,12 @@ After Step 3, there is another error about templating
 	
 To fix it, you'll need to add
 	
-	# app/config/packages/framework.yaml	
-	templating:
-		engines: ['twig', 'php']
+```yaml
+# app/config/packages/framework.yaml
+framework:
+    templating:
+        engines: ['twig', 'php']
+```
 
 Now, the install of FOSUserBundle will work, you can go to step 5 to go further.
 
@@ -108,7 +112,7 @@ security:
         ROLE_ADMIN:       ROLE_USER
         ROLE_SUPER_ADMIN: ROLE_ADMIN
 
-    providers:us
+    providers:
         fos_userbundle:
             id: fos_user.user_provider.username
 
