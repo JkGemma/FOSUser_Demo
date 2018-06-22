@@ -172,3 +172,5 @@ Me. (Flayac 'JkGemma' Quentin, Student @Samsung Campus)
 https://www.linkedin.com/in/flayacquentin/
 
 Symfony Doc. https://symfony.com/doc/current/bundles/FOSUserBundle/index.html
+
+FriendsOfSymfony Bundle. https://github.com/FriendsOfSymfony/FOSUserBundle
