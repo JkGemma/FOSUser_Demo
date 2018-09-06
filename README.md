@@ -78,7 +78,7 @@ Now, the install of FOSUserBundle will work, you can go to step 5 to go further.
 
 
 ## Step 5 - User Entity 
-If you need more information about the User Entity, make sure to read Step 3 of FOSUserBundle Symfony Doc below.
+If you need more information about the User Entity, make sure to read Step 3 of FOSUserBundle Symfony Doc below (see Credits & Sources).
 
 If you're persisting your users via the Doctrine ORM, then your `User` class should live in the `Entity` namespace of your bundle and look like this to start:
 
